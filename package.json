@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -12,6 +12,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/pouchdb": "^6.4.0",
+    "events": "^3.3.0",
+    "pouchdb": "^8.0.1",
+    "pouchdb-browser": "^8.0.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },

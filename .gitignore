@@ -26,3 +26,10 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# PouchDB
+/_replicator
+/_users
+/pouch__all_dbs__
+/todos
+log.txt
