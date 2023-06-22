@@ -34,7 +34,10 @@ const { todos, isLoading, changeToDone, deleteTodo, saveTodo } = useTodos()
 
 <style scoped>
 .heading {
+  font-size: 2.2rem;
   text-align: center;
+  text-shadow: -3px 3px 0 white;
+  transform: rotateZ(-4deg);
 }
 .todoContainer {
   display: flex;

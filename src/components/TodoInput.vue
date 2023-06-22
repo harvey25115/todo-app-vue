@@ -26,7 +26,4 @@ defineEmits(['update:modelValue'])
 .input:focus {
   background-color: white;
 }
-.input::placeholder {
-  font-style: italic;
-}
 </style>
