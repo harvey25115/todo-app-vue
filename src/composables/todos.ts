@@ -31,13 +31,10 @@ export function useTodos() {
         console.log(err)
       })
 
-    // listen for changes
+    // listen for changes & reload data
     dbChanges = localDB
       .changes({ live: true })
-      .on('change', (change) => {
-        console.log(change)
-        loadData()
-      })
+      .on('change', () => loadData())
       .on('error', (err) => console.log(err))
   })
 
@@ -51,10 +48,13 @@ export function useTodos() {
    * Get todos
    */
   function loadData() {
-    localDB.allDocs({ include_docs: true, descending: true }).then((result) => {
-      isLoading.value = false
-      todos.value = result.rows.map((data) => data.doc)
-    })
+    localDB
+      .allDocs({ include_docs: true, descending: true })
+      .then((result) => {
+        isLoading.value = false
+        todos.value = result.rows.map((data) => data.doc)
+      })
+      .catch((err) => console.log(err))
   }
 
   /**
