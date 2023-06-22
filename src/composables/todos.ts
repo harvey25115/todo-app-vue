@@ -63,7 +63,7 @@ export function useTodos() {
   function saveTodo(todoContent: string) {
     localDB
       .put({ _id: new Date().toISOString(), content: todoContent, isDone: false })
-      .then((response) => console.log(response))
+      .then((response) => console.log('added', response))
       .catch((err) => console.log(err))
   }
 
@@ -75,7 +75,7 @@ export function useTodos() {
     if (confirm('Are you sure to delete?')) {
       localDB
         .remove(todo)
-        .then((response) => console.log(response))
+        .then((response) => console.log('deleted', response))
         .catch((err) => console.log(err))
     }
   }
@@ -87,7 +87,7 @@ export function useTodos() {
   function changeToDone(todo: any) {
     localDB
       .put({ ...todo, isDone: true })
-      .then((response) => console.log(response))
+      .then((response) => console.log('updated', response))
       .catch((err) => console.log(err))
   }
 
