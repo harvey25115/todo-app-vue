@@ -49,10 +49,10 @@ button:hover {
 
 .banner--header {
   top: 0;
-  background-image: url(/public/wave-up.svg);
+  background-image: url(/wave-up.svg);
 }
 
 .banner--footer {
   bottom: 0;
-  background-image: url(/public/wave-down.svg);
+  background-image: url(/wave-down.svg);
 }
