@@ -1,10 +1,12 @@
 <script setup lang="ts">
-defineProps(['todos', 'onDelete', 'onCompleted'])
 import TodoItem from './TodoItem.vue'
+
+defineProps(['todos', 'onDelete', 'onCompleted'])
 
 // sample data
 // const todos = [{ _id: 1, content: 'hello', isDone: true }]
 </script>
+
 <template>
   <ul class="todoList">
     <TodoItem

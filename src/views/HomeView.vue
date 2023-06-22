@@ -60,12 +60,10 @@ const { todos, isLoading, changeToDone, deleteTodo, saveTodo } = useTodos()
   color: var(--btn-c-blue);
   font-weight: bold;
 }
-
 .info {
   font-size: 1.5rem;
   color: var(--primary-c-grey);
 }
-
 /* media queries */
 @media (max-width: 425px) {
   .todoContainer {

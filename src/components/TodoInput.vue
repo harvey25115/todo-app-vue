@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// v-model bindings
 defineProps(['modelValue'])
 defineEmits(['update:modelValue'])
 </script>
