@@ -10,8 +10,8 @@ export function useTodos() {
   const isLoading = ref(true)
 
   // DB init
-  const localDB = new PouchDB('todos')
-  const remoteDB = new PouchDB('http://localhost:5984/todos')
+  const localDB = new PouchDB(import.meta.env.VITE_DB_NAME)
+  const remoteDB = new PouchDB(import.meta.env.VITE_REMOTE_HOST + import.meta.env.VITE_DB_NAME)
 
   // one-way replicate then sync DB on mounted
   let dbSync: any

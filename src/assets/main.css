@@ -56,3 +56,10 @@ button:hover {
   bottom: 0;
   background-image: url(/wave-down.svg);
 }
+
+/* media queries */
+@media (max-width: 425px) {
+  :root {
+    font-size: 14px;
+  }
+}
