@@ -18,5 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
   gap: 1rem;
   justify-content: flex-end;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 </style>
